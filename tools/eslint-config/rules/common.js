@@ -1,5 +1,6 @@
 module.exports = {
   rules: {
+    'react/jsx-props-no-spreading': 0,
     'default-param-last': ['warn'],
 
     // specify the maximum length of a line in your program
@@ -16,9 +17,5 @@ module.exports = {
         ignoreTemplateLiterals: true,
       },
     ],
-
-    // require all requires be top-level
-    // https://eslint.org/docs/rules/global-require
-    'global-require': 'error',
   },
 };

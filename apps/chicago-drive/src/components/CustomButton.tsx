@@ -1,10 +1,11 @@
 import React from 'react';
 import { Button } from '@mui/material';
 
-type ButtonProps = {
-  children: string | number | JSX.Element;
+type TButton = {
+  children: string | number;
+  sx: object;
 };
-function CustomButton({ children, ...props }: ButtonProps) {
+function CustomButton({ children, sx, ...props }: TButton) {
   return (
     <Button
       sx={{
@@ -18,6 +19,7 @@ function CustomButton({ children, ...props }: ButtonProps) {
         '&:hover': {
           boxShadow: 0,
         },
+        ...sx,
       }}
       {...props}
     >

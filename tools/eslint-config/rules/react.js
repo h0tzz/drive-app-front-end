@@ -1,17 +1,5 @@
 module.exports = {
   rules: {
-    // Disallow JSX props spreading
-    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
-    'react/jsx-props-no-spreading': [
-      'error',
-      {
-        html: 'enforce',
-        custom: 'enforce',
-        explicitSpread: 'ignore',
-        exceptions: [],
-      },
-    ],
-
     // Require stateless functions when not using lifecycle methods, setState or ref
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
     'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
@@ -33,7 +21,7 @@ module.exports = {
 
     // Disallow .jsx files in project.
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
-    'react/jsx-filename-extension': [2, { allow: 'as-needed' }],
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
 
     // Enforce shorthand or standard form for React fragments
     // https://github.com/yannickcr/eslint-plugin-react/blob/bc976b837abeab1dffd90ac6168b746a83fc83cc/docs/rules/jsx-fragments.md

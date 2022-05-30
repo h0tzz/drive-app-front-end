@@ -3,33 +3,33 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
-import { Box, Container } from '@mui/material';
+import { Box } from '@mui/material';
 import theme from '../styles/theme';
 
-//modules
+// modules
 import Registration from './Registration/Registration';
+import UserProfile from './UserProfile/UserProfile';
+import { COLORS } from '../styles/consts';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container fixed disableGutters>
-        <Box
-          sx={{
-            background: 'linear-gradient(#18C8FF 0%, #FFFEE0 70%)',
-            height: '100vh',
-            px: 2.5,
-            pt: 2.5,
-            pb: 11.25,
-          }}
-        >
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Registration />} />
-            </Routes>
-          </BrowserRouter>
-        </Box>
-      </Container>
+      <Box
+        sx={{
+          background: COLORS.gradient.ukraine,
+          height: '100%',
+          py: 2.5,
+          color: COLORS.main,
+        }}
+      >
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Registration />} />
+            <Route path="/profile" element={<UserProfile />} />
+          </Routes>
+        </BrowserRouter>
+      </Box>
     </ThemeProvider>
   );
 }

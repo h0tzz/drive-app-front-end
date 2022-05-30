@@ -1,16 +1,19 @@
 import React from 'react';
-import { Box, Button, Stack } from '@mui/material';
-import GoogleIcon from '../../styles/icons/GoogleIcon';
+import { Box } from '@mui/material';
+import GoogleIcon from '../../components/icons/GoogleIcon';
 import CustomButton from '../../components/CustomButton';
+import { COLORS } from '../../styles/consts';
 
-function Registration() {
+function Registration(): JSX.Element {
   return (
     <Box
       sx={{
+        background: COLORS.gradient.ukraine,
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-around',
+        justifyContent: 'space-evenly',
         height: '100%',
+        px: 2.5,
       }}
     >
       <Box
@@ -32,7 +35,7 @@ function Registration() {
         <Box component="span" sx={{ color: '#6F767E', maxWidth: { xs: '75%' }, mb: 7.75 }}>
           Доска объявлений для поиска попуток в твоем городе
         </Box>
-        <CustomButton startIcon={<GoogleIcon />} variant="contained" color={'neutral'}>
+        <CustomButton startIcon={<GoogleIcon />} variant="contained" color="neutral">
           Продолжить с Google
         </CustomButton>
       </Box>

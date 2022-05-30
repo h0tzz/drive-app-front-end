@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
-    'airbnb',
+    'eslint-config-airbnb-typescript',
+    'plugin:import/typescript',
     './rules/react',
     './rules/react-hooks',
     './rules/react-a11y',
@@ -9,11 +10,25 @@ module.exports = {
     'prettier',
   ],
 
-  plugins: ['prettier'],
-  parser: "@babel/eslint-parser",
+  plugins: ['prettier', 'react', 'import', 'jsx-a11y'],
+  parser: '@typescript-eslint/parser',
+  globals: {
+    React: true,
+    google: true,
+    mount: true,
+    mountWithRouter: true,
+    shallow: true,
+    shallowWithRouter: true,
+    context: true,
+    expect: true,
+    jsdom: true,
+    JSX: true,
+  },
   parserOptions: {
     ecmaVersion: 8,
     requireConfigFile: false,
+    project: ['tsconfig.json'],
+    createDefaultProgram: true,
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
       impliedStrict: true,
@@ -31,6 +46,9 @@ module.exports = {
   },
 
   settings: {
+    react: {
+      version: 'detect',
+    },
     'import/resolver': {
       webpack: {
         config: {
@@ -51,28 +69,7 @@ module.exports = {
         jsx: 'never',
         ts: 'never',
         tsx: 'never',
-        '': 'never',
       },
     ],
   },
-  overrides: [
-    {
-      files: [ "**/*.ts?(x)" ],
-      parser: "@typescript-eslint/parser",
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        },
-        ecmaVersion: 2018,
-        sourceType: "module"
-      },
-      plugins: [
-        "@typescript-eslint"
-      ],
-      rules: {
-        "@typescript-eslint/no-array-constructor": "warn",
-        "no-array-constructor": "off"
-      }
-    }
-  ],
-}
+};
