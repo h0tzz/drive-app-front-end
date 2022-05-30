@@ -396,13 +396,16 @@
    * 3. It's useful to have a centralized inventory of all projects and their important metadata.
    */
   "projects": [
+    // apps
     {
       "packageName": "chicago-drive",
       "projectFolder": "apps/chicago-drive"
     },
+    // componenents
+    // tools
     {
-      "packageName": "@shared/components",
-      "projectFolder": "libs/components"
+      "packageName": "@tools/eslint-config",
+      "projectFolder": "tools/eslint-config"
     }
     // {
     //   /**
