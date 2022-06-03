@@ -51,6 +51,7 @@ const UserProfile: React.FC = () => {
           }}
         >
           <Typography>Я водитель</Typography>
+          {/* @ts-ignore */}
           <CustomSwitch onChange={onSwitchToggle} />
         </Stack>
         {isDriver && <AboutSection title={ABOUT_SECTION_TITLES.CAR} fields={ABOUT_CAR_FIELDS} />}

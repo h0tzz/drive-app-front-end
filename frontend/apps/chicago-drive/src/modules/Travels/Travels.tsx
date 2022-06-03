@@ -5,7 +5,7 @@ import { HeaderPanel, DateFiltersPanel, componentsVariables, componentsTypes } f
 const Travels: React.FC = () => {
   const [calendarDate, setCalendarDate] = React.useState<Date | null>(new Date());
 
-  const onClickDateFilterButton = React.useCallback(
+  const onClickFilterButton = React.useCallback(
     (filterType: Exclude<componentsTypes.TDatePanelFilters, 'calendar'>): void => {},
     []
   );
@@ -22,7 +22,7 @@ const Travels: React.FC = () => {
     >
       <HeaderPanel avatarSrc={''} title={'Поездки'} />
       <DateFiltersPanel
-        onButtonClick={onClickDateFilterButton}
+        onButtonClick={onClickFilterButton}
         calendarDate={calendarDate}
         onCalendarChange={setCalendarDate}
         onCalendarAccept={setCalendarDate}

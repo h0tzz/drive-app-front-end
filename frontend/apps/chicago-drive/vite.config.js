@@ -20,9 +20,4 @@ export default defineConfig({
       plugins: [materialCssBaselineFixUp],
     },
   },
-  build: {
-    rollupOptions: {
-      external: ['@date-io/dayjs'],
-    },
-  },
 });
