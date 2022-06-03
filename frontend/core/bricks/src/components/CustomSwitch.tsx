@@ -50,9 +50,6 @@ const StyledSwitch = styled((props: SwitchProps) => (
     }),
   },
 }));
-
-function CustomSwitch({ ...props }) {
-  return <StyledSwitch {...props} />;
-}
+const CustomSwitch: React.FC = ({ ...props }) => <StyledSwitch {...props} />;
 
 export default CustomSwitch;

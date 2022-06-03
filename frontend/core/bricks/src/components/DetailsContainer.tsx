@@ -8,12 +8,12 @@ type TDetailsHeader = {
   children: JSX.Element;
   contentAfterAvatar: JSX.Element;
 };
-function DetailsContainer({
+const DetailsContainer: React.FC<TDetailsHeader> = ({
   children,
   contentAfterAvatar,
   headerPanelTitle,
   avatarSrc = '',
-}: TDetailsHeader): JSX.Element {
+}) => {
   return (
     <Box
       sx={{
@@ -56,6 +56,6 @@ function DetailsContainer({
       {children}
     </Box>
   );
-}
+};
 
 export default DetailsContainer;

@@ -21,8 +21,7 @@ const StyledInput = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create(['border-color', 'background-color', 'box-shadow']),
   },
 }));
-
-function CustomInput({ label = '', ...props }: TCustomInput): JSX.Element {
+const CustomInput: React.FC<TCustomInput> = ({ label = '', ...props }) => {
   return (
     <FormControl variant="standard">
       <InputLabel shrink htmlFor="styled-input" sx={{ color: COLORS.neutral }}>
@@ -31,6 +30,6 @@ function CustomInput({ label = '', ...props }: TCustomInput): JSX.Element {
       <StyledInput id="styled-input" {...props} />
     </FormControl>
   );
-}
+};
 
 export default CustomInput as typeof TextField;

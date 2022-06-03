@@ -1,13 +1,13 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import { CustomButton, GoogleIcon, COLORS } from '@core/bricks';
+import { CustomButton, GoogleIcon, componentsVariables } from '@core/bricks';
 
 // TODO: редиректить на глвную страницу, если юзер залогинен
-function Registration(): JSX.Element {
+const Registration: React.FC = () => {
   return (
     <Box
       sx={{
-        background: COLORS.gradient.ukraine,
+        background: componentsVariables.COLORS.gradient.ukraine,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-evenly',
@@ -40,6 +40,6 @@ function Registration(): JSX.Element {
       </Box>
     </Box>
   );
-}
+};
 
 export default Registration;

@@ -1,19 +1,17 @@
 import React from 'react';
 import { Box } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { MobileDatePicker } from '@mui/x-date-pickers/MobileDatePicker';
 import CalendarIcon from '../icons/CalendarIcon';
 
 type TDatePicker = {
-  date: Date | string | null;
-  setDate: (date: Date | null | string) => void;
+  date: Date | null;
+  onAccept: (date: Date | null) => void;
+  onChange: (date: Date | null) => void;
   withBackground?: boolean;
 };
-
-function CustomDatePicker({ date, setDate, withBackground, ...props }: TDatePicker): JSX.Element {
-  const [value, setValue] = React.useState<Date | null>(new Date());
-
+const CustomDatePicker: React.FC<TDatePicker> = ({ date, onChange, onAccept, withBackground, ...props }) => {
   return (
     <Box
       sx={{
@@ -31,19 +29,19 @@ function CustomDatePicker({ date, setDate, withBackground, ...props }: TDatePick
         borderColor: withBackground ? '#DCE1E6' : 'transparent',
       }}
     >
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
         <MobileDatePicker
           showToolbar={false}
-          value={value}
-          onChange={newValue => {
-            setValue(newValue);
-          }}
+          value={date}
+          onAccept={onAccept}
+          onChange={onChange}
+          // @ts-ignore
           renderInput={({ inputRef, inputProps }) => <CalendarIcon ref={inputRef} {...inputProps} />}
           {...props}
         />
       </LocalizationProvider>
     </Box>
   );
-}
+};
 
 export default CustomDatePicker;

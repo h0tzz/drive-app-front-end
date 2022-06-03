@@ -12,7 +12,7 @@ const Input = styled('input')({
 // TODO: добавить поле "мои поездки" перед боольшой аватаркой, если у водителя есть поездки
 // TODO: заменить label на компонент из material-ui
 
-function UserProfile(): JSX.Element {
+const UserProfile: React.FC = () => {
   // TODO: получать инфу с бека
   const [isDriver, setIsDriver] = React.useState<Boolean>(false);
 
@@ -66,6 +66,6 @@ function UserProfile(): JSX.Element {
       </>
     </DetailsContainer>
   );
-}
+};
 
 export default UserProfile;

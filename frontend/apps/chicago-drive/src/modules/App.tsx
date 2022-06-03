@@ -3,23 +3,23 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { ThemeProvider } from '@mui/material/styles';
 import { Box, CssBaseline } from '@mui/material';
-import { COLORS, theme } from '@core/bricks';
+import { componentsVariables, theme } from '@core/bricks';
 
 // modules
 import Registration from './Registration/Registration';
 import UserProfile from './UserProfile/UserProfile';
 import Travels from './Travels/Travels';
 
-function App() {
+const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box
         sx={{
-          background: COLORS.gradient.ukraine,
+          background: componentsVariables.COLORS.gradient.ukraine,
           height: '100vh',
           py: 2.5,
-          color: COLORS.main,
+          color: componentsVariables.COLORS.main,
         }}
       >
         <BrowserRouter>
@@ -32,6 +32,6 @@ function App() {
       </Box>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

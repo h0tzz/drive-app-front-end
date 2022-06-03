@@ -1,13 +1,19 @@
 import React from 'react';
 import { Box } from '@mui/material';
-import { HeaderPanel, DateFiltersPanel, COLORS, DATE_FILTERS } from '@core/bricks';
+import { HeaderPanel, DateFiltersPanel, componentsVariables, componentsTypes } from '@core/bricks';
 
-function Travels(): JSX.Element {
-  const onClickDateButton = React.useCallback((filterType: typeof DATE_FILTERS[keyof typeof DATE_FILTERS]) => {}, []);
+const Travels: React.FC = () => {
+  const [calendarDate, setCalendarDate] = React.useState<Date | null>(new Date());
+
+  const onClickDateFilterButton = React.useCallback(
+    (filterType: Exclude<componentsTypes.TDatePanelFilters, 'calendar'>): void => {},
+    []
+  );
+
   return (
     <Box
       sx={{
-        background: COLORS.gradient.ukraine,
+        background: componentsVariables.COLORS.gradient.ukraine,
         display: 'flex',
         flexDirection: 'column',
         height: '100%',
@@ -15,9 +21,14 @@ function Travels(): JSX.Element {
       }}
     >
       <HeaderPanel avatarSrc={''} title={'Поездки'} />
-      <DateFiltersPanel onClick={onClickDateButton} />
+      <DateFiltersPanel
+        onButtonClick={onClickDateFilterButton}
+        calendarDate={calendarDate}
+        onCalendarChange={setCalendarDate}
+        onCalendarAccept={setCalendarDate}
+      />
     </Box>
   );
-}
+};
 
 export default Travels;

@@ -2,19 +2,18 @@ import React from 'react';
 import { Avatar, Stack, Typography } from '@mui/material';
 import CarIcon from '../icons/CarIcon';
 
-type HeaderPanelType = {
+type THeaderPanel = {
   avatarSrc: string | undefined;
   title: string;
   justifyContent?: string;
   isNeedMargin?: boolean;
 };
-
-function HeaderPanel({
+const HeaderPanel: React.FC<THeaderPanel> = ({
   avatarSrc,
   title,
   justifyContent = 'space-between',
   isNeedMargin = false,
-}: HeaderPanelType): JSX.Element {
+}) => {
   return (
     <Stack
       direction="row"
@@ -32,6 +31,6 @@ function HeaderPanel({
       <Avatar src={avatarSrc}>N</Avatar>
     </Stack>
   );
-}
+};
 
 export default HeaderPanel;

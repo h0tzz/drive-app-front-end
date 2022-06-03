@@ -11,8 +11,8 @@ import DateFiltersPanel from './src/components//DateFiltersPanel';
 import DetailsContainer from './src/components//DetailsContainer';
 import HeaderPanel from './src/components//HeaderPanel';
 
-//variables
-import { DATE_FILTERS, COLORS } from './src/variables';
+import * as componentsVariables from './src/variables';
+import * as componentsTypes from './src/types';
 import theme from './src/theme';
 
 export {
@@ -26,7 +26,7 @@ export {
   DateFiltersPanel,
   DetailsContainer,
   HeaderPanel,
-  DATE_FILTERS,
-  COLORS,
+  componentsVariables,
+  componentsTypes,
   theme,
 };

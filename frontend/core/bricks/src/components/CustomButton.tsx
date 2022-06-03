@@ -3,9 +3,9 @@ import { Button } from '@mui/material';
 
 type TButton = {
   children: string | number;
-  sx: object;
+  sx?: object;
 };
-function CustomButton({ children, sx, ...props }: TButton) {
+const CustomButton: React.FC<TButton> = ({ children, sx, ...props }) => {
   return (
     <Button
       sx={{
@@ -26,6 +26,6 @@ function CustomButton({ children, sx, ...props }: TButton) {
       {children}
     </Button>
   );
-}
+};
 
 export default CustomButton as typeof Button;

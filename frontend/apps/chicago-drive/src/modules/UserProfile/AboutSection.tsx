@@ -7,7 +7,7 @@ type TAboutSection = {
   fields: readonly { label: string; type: string; placeholder: string }[];
 };
 
-function AboutSection({ title, fields = [] }: TAboutSection): JSX.Element {
+const AboutSection: React.FC<TAboutSection> = ({ title, fields = [] }) => {
   return (
     <Box
       sx={{
@@ -42,6 +42,6 @@ function AboutSection({ title, fields = [] }: TAboutSection): JSX.Element {
       ))}
     </Box>
   );
-}
+};
 
 export default AboutSection;
