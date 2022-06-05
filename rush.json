@@ -17,11 +17,11 @@
   "projects": [
     {
       "packageName": "chicago-drive",
-      "projectFolder": "frontend/apps/chicago-drive"
+      "projectFolder": "frontend/app"
     },
     {
-      "packageName": "@core/bricks",
-      "projectFolder": "frontend/core/bricks"
+      "packageName": "@shared/components",
+      "projectFolder": "frontend/shared/components"
     },
     {
       "packageName": "@tools/eslint-config",

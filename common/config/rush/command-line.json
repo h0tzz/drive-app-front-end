@@ -5,7 +5,7 @@
       "name": "run",
       "commandKind": "global",
       "summary": "Run UI content",
-      "shellCommand": "cd frontend/apps/chicago-drive && rushx dev"
+      "shellCommand": "cd frontend/app && rushx dev"
     },
     {
       "name": "prettier",
