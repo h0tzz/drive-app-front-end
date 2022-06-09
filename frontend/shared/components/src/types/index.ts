@@ -1,6 +1,5 @@
 import {
-  TDatePanelFilters as FiltersPanelTypes,
-  TDateFiltersWithoutCalendar as FiltersPanelWithoutCalendarTypes,
+  TDatePanelFilters as TFiltersPanel,
 } from './date-filters.types';
 
-export type { FiltersPanelTypes, FiltersPanelWithoutCalendarTypes };
+export type { TFiltersPanel };

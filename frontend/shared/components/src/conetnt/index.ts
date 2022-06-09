@@ -1,4 +1,4 @@
 import DateFiltersPanel from './DateFiltersPanel';
-import TravelCard from './TravelCard';
+import TripCard from './TripCard';
 
-export { DateFiltersPanel, TravelCard };
+export { DateFiltersPanel, TripCard };

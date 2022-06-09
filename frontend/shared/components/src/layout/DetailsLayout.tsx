@@ -25,7 +25,6 @@ const DetailsLayout: React.FC<TDetailsHeader> = ({
         borderTopRightRadius: '250% 160px',
         borderTopLeftRadius: '250% 160px',
         mt: 15,
-        px: 2.5,
       }}
     >
       <HeaderNav avatarSrc={avatarSrc} title={headerPanelTitle} justifyContent={'space-around'} isNeedMargin />

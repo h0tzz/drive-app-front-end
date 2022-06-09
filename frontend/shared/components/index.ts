@@ -1,5 +1,5 @@
 // content
-import { DateFiltersPanel, TravelCard } from './src/conetnt';
+import { DateFiltersPanel, TripCard } from './src/conetnt';
 
 // custom-elements
 import { CustomButton, CustomDatePicker, CustomSwitch, CustomFab, CustomInput } from './src/custom-elements';
@@ -15,7 +15,7 @@ import { HeaderNav } from './src/navigation';
 
 export {
   DateFiltersPanel,
-  TravelCard,
+  TripCard,
   CustomButton,
   CustomDatePicker,
   CustomSwitch,

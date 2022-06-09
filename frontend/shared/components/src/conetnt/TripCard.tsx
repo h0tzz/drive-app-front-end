@@ -1,7 +1,12 @@
 import React from 'react';
 import { Box, Stack } from '@mui/material';
+import { ITripInfo } from '@shared/types';
 
-const TravelCard: React.FC = () => {
+interface ITripCard {
+  trip: ITripInfo;
+}
+
+const TripCard: React.FC<ITripCard> = ({ trip }) => {
   return (
     <Box
       sx={{
@@ -18,4 +23,4 @@ const TravelCard: React.FC = () => {
   );
 };
 
-export default TravelCard;
+export default TripCard;

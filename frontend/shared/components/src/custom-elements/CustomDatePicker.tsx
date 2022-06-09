@@ -35,8 +35,8 @@ const CustomDatePicker: React.FC<TDatePicker> = ({ date, onChange, onAccept, wit
           value={date}
           onAccept={onAccept}
           onChange={onChange}
-          // @ts-ignore
           renderInput={({ inputRef, inputProps }) => (
+            // @ts-ignore
             <CalendarIcon sx={{ width: '100%' }} ref={inputRef} {...inputProps} />
           )}
           {...props}

@@ -16,7 +16,7 @@ const ThemeProvider: React.FC<Theme> = ({ children }) => {
         sx={{
           background: COLORS.gradient.ukraine,
           height: '100vh',
-          py: 2.5,
+          p: 2.5,
           color: COLORS.main,
         }}
       >

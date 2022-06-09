@@ -1,0 +1,17 @@
+{
+  "name": "@shared/types",
+  "private": true,
+  "version": "0.0.0",
+  "author": "Ilya Malashenko",
+  "scripts": {
+    "build": "",
+    "lint": "eslint \"**/*.{ts,tsx}\"",
+    "lint:fix": "eslint \"**/*.{ts,tsx}\" --fix"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3",
+    "eslint": "~8.16.0",
+    "prettier": "~2.6.2",
+    "@tools/dev-tools": "workspace:*"
+  }
+}

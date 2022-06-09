@@ -15,6 +15,9 @@ const materialCssBaselineFixUp = {
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    chunkSizeWarningLimit: 1600,
+  },
   optimizeDeps: {
     esbuildOptions: {
       plugins: [materialCssBaselineFixUp],

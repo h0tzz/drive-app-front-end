@@ -24,6 +24,10 @@
       "projectFolder": "frontend/shared/components"
     },
     {
+      "packageName": "@shared/types",
+      "projectFolder": "frontend/shared/types"
+    },
+    {
       "packageName": "@tools/eslint-config",
       "projectFolder": "frontend/tools/eslint-config"
     },

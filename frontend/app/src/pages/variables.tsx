@@ -1,20 +1,18 @@
 import React from 'react';
-import { RegistrationPage, TravelsPage, UserProfilePage } from './index';
-
 export const PAGES = [
   {
     id: 1,
     path: '/',
-    element: <RegistrationPage />,
+    Page: React.lazy(() => import('./Registration/Registration')),
   },
   {
     id: 2,
     path: '/profile',
-    element: <UserProfilePage />,
+    Page: React.lazy(() => import('./UserProfile/UserProfile')),
   },
   {
     id: 3,
-    path: '/travels',
-    element: <TravelsPage />,
+    path: '/trips',
+    Page: React.lazy(() => import('./Trips/Trips')),
   },
 ];
