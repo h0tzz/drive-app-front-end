@@ -2,10 +2,10 @@ import React from 'react';
 import { Stack } from '@mui/material';
 import { CustomButton, CustomDatePicker } from '../custom-elements';
 import { DATE_FILTERS } from '../variables';
-import { FiltersPanelWithoutCalendarTypes } from '../types';
+import { TDatePanelFilters } from '../types/date-filters.types';
 
 type TDatePanel = {
-  onButtonClick: (filterType: FiltersPanelWithoutCalendarTypes) => void;
+  onButtonClick: (filterType: Exclude<TDatePanelFilters, 'calendar'>) => void;
   calendarDate: Date | null;
   onCalendarChange: (date: Date | null) => void;
   onCalendarAccept: (date: Date | null) => void;
@@ -27,7 +27,7 @@ const DateFiltersPanel: React.FC<TDatePanel> = ({
             color="neutral"
             sx={{ height: 35, fontSize: 14, px: 1.25 }}
             key={k}
-            onClick={() => onButtonClick(v as FiltersPanelWithoutCalendarTypes)}
+            onClick={() => onButtonClick(v as Exclude<TDatePanelFilters, 'calendar'>)}
           >
             {v}
           </CustomButton>
